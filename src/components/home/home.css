@@ -1,0 +1,151 @@
+.container {
+    background-image: url(../../../public/img/Rectangle\ 1.png);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222831;
+    padding: 15px 60px;
+    height: 20px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    max-width: 1400px;
+    margin: 0 auto;
+    border-radius: 64px;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-center {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+}
+
+.nav-logo {
+    width: 20px;
+    height: 20px;
+}
+
+.hero-card {
+    background: white;
+    max-width: 500px;
+    padding-left: 40px;
+    padding-top: 1px;
+    height: 300px;
+    margin-top: 200px;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-card h1 {
+    margin-bottom: 12px;
+    font-size: 50px;
+    color: #222831;
+}
+
+.hero-card p {
+    margin-bottom: 24px;
+    color: #666;
+    font-size: 16px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-primary {
+    background-color: #008080;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 200px;
+    height: 50px;
+}
+
+.btn-primary:hover {
+    background-color: #006666;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #222831;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    width: 200px;
+    height: 50px;
+}
+
+.btn-outline:hover {
+    background-color: #f5f5f5;
+}
+
+@media (max-width: 1500px) {
+    .container{
+        height: 180vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+
+    }
+
+    .nav-left, .nav-right {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .nav-right{
+        position: absolute;
+        top: 0;
+        display: none;
+    }
+
+    .container{
+        height: 180vh;
+    }
+
+    .hero-card {
+        margin: 40px auto 0;
+        padding: 30px 20px;
+        height: 250px;
+    }
+
+    .hero-card h1 {
+        font-size: 24px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn-primary, .btn-outline {
+        width: 100%;
+    }
+}
