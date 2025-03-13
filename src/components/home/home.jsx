@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./home.css";
 
 const Home = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="container">
       <nav className="navbar">
-        <ul className="nav-left">
+        <ul className={`nav-left ${isMenuOpen ? "active" : ""}`}>
           <li>Welcome</li>
           <li>Courses</li>
           <li>Instructors</li>
@@ -16,11 +22,17 @@ const Home = () => {
           <span>EduInspire</span>
         </div>
 
-        <ul className="nav-right">
+        <ul className={`nav-right ${isMenuOpen ? "active" : ""}`}>
           <li>Overview</li>
           <li>@eduinspire</li>
           <li>Get in Touch</li>
         </ul>
+
+        <div className="hamburger" onClick={toggleMenu}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
       </nav>
 
       <div className="hero-card">

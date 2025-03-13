@@ -35,9 +35,9 @@
         flex-direction: column;
         align-items: center;
         gap: 30px;
+        padding-right: 100px;
     }
 
     .card {
-        text-align: center;
     }
 }
